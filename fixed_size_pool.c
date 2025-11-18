@@ -51,6 +51,9 @@ int main() {
   allocate_block();
   allocate_block();
   allocate_block();
+  free_list_free(b);
+  free_list_free(b);
+  free_list_free(b);
   allocate_block();
   
   return 0;
