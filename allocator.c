@@ -14,11 +14,12 @@ struct node {
   int val;
 };
 
-struct node pool[POOL_SIZE];
-struct node *free_list = pool + 0;
+static struct node pool[POOL_SIZE];
+static struct node *free_list;
 
 // Allocator
 void init_pool(void) {
+  free_list = pool + 0;
   for (int i = 0; i < POOL_SIZE-1; ++i) {
     pool[i].next = pool + i + 1;
   }
@@ -52,6 +53,10 @@ struct node *init_bst(int val) {
   return h;
 }
 void insert_bst(struct node *h, int val) {
+  if (h == NULL) {
+    return;
+  }
+
   if (val <= h->val) {
     if (h->l == NULL) {
       struct node *n = allocate();
