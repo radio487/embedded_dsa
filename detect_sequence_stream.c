@@ -1,6 +1,6 @@
 /*
 * Detect a four byte sequence in a stream
-* IN CONSTRUCTION I NEED A hex to string program
+* IN CONSTRUCTION I NEED A hex to string translation to handle big numbers
 */
 
 #include <stdio.h>

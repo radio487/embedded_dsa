@@ -50,7 +50,7 @@ bool fifo_pop(struct fifo *f, int *val) {
 }
 
 int main() {
-  struct fifo f;
+  static struct fifo f;
   int val;
 
   fifo_init(&f);

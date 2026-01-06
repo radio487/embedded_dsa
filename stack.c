@@ -47,7 +47,7 @@ bool lifo_pop(struct lifo *s, int *val) {
 }
 
 int main() {
-  struct lifo s;
+  static struct lifo s;
   int val;
   
   init_lifo(&s);
